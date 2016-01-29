@@ -1,8 +1,7 @@
 class JournalEntry < ActiveRecord::Base
-
-  def kevin
-    return amount
-  end
-
+  belongs_to :user
+  belongs_to :subcategory
+  belongs_to :account
+  belongs_to :bill
 
 end
