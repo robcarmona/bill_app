@@ -14,11 +14,16 @@
 ActiveRecord::Schema.define(version: 20160123025113) do
 
   create_table "journal_entries", force: :cascade do |t|
-    t.string   "description", limit: 255
+    t.string   "description",    limit: 255
     t.date     "date"
-    t.decimal  "amount",                  precision: 8, scale: 2
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.decimal  "amount",                     precision: 8, scale: 2
+    t.string   "month",          limit: 255
+    t.integer  "user_id",        limit: 4
+    t.integer  "subcategory_id", limit: 4
+    t.integer  "account_id",     limit: 4
+    t.integer  "bill_id",        limit: 4
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
   end
 
 end
