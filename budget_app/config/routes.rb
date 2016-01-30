@@ -7,7 +7,10 @@ Rails.application.routes.draw do
 
   resources :journal_entries
   resources :bills
+
+  resources :users
   resources :accounts
+
   resources :categories do
     resources :sub_categories
   end
