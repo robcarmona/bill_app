@@ -1,0 +1,22 @@
+var initializer = {};
+
+
+initializer.init = function() {
+  $( document ).ready(function() {
+
+      initializer.setActiveTab();
+
+  });
+};
+
+/**
+ * Sets current active tab based on controller name
+ * Controller name is set on page body class
+ */
+initializer.setActiveTab = function() {
+  var controllerName = $('body').attr('class').replace("_", "-");
+  $(".tab-" + controllerName).addClass("active");
+};
+
+// Called on every page
+initializer.init();
