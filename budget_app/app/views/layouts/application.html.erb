@@ -8,8 +8,9 @@
 </head>
 <body class="<%= controller_name %>">
   <div id="main-wrapper" class="container">
-
-    <%= render partial: "shared/nav" %>
+    <% if current_user.present? %>
+      <%= render partial: "shared/nav" %>
+    <% end %>
     <%= yield %>
   </div>
 </body>
