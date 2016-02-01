@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
   before_action :set_accounts
+  before_action :set_account, only: [:edit, :update, :destroy]
 
   def new
   end
@@ -22,11 +23,16 @@ class AccountsController < ApplicationController
   end
 
   def destroy
+    @account.destroy
+    redirect_to accounts_path
   end
 
   private
   def set_accounts
     @accounts = current_user.accounts
+  end
+  def set_account
+    @account = Account.find(params[:id])
   end
 
   def account_params
