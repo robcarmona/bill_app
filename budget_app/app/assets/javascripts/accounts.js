@@ -1,13 +1,14 @@
 var accounts = {
-  formId: "#js-account-form"
+  formId: "#js-account-form",
+  addBtnId: "#js-add-btn"
 };
 
 accounts.cancelBtnOnClick = function() {
-  $(accounts.formId).addClass("hidden");
-  $("#js-add-btn").removeClass("hidden");
+  $(this.formId).slideUp();
+  $(this.addBtnId).slideDown();
 };
 
 accounts.addBtnOnClick = function() {
-  $(accounts.formId).removeClass("hidden");
-  $("#js-add-btn").addClass("hidden");
+  $(this.formId).slideDown();
+  $(this.addBtnId).slideUp();
 }
