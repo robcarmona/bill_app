@@ -57,7 +57,7 @@
             <tr>
               <td><%= account.name %></td>
               <td><%= account.description %></td>
-              <td><%= link_to "Delete", account_path(account), method: :delete  %></td>
+              <td><%= link_to "<span class='glyphicon glyphicon-remove'></span>".html_safe, account_path(account), method: :delete  %></td>
             </tr>
           <% end %>
         </tbody>
