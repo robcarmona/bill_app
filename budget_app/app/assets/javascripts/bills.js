@@ -1,2 +1,14 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+var bills = {
+  formId: "#js-bill-form",
+  addBtnId: "#js-add-btn"
+};
+
+bills.cancelBtnOnClick = function() {
+  $(this.formId).slideUp();
+  $(this.addBtnId).slideDown();
+};
+
+bills.addBtnOnClick = function() {
+  $(this.formId).slideDown();
+  $(this.addBtnId).slideUp();
+}
