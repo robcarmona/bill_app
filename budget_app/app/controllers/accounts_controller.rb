@@ -31,6 +31,7 @@ class AccountsController < ApplicationController
   def set_accounts
     @accounts = current_user.accounts
   end
+  
   def set_account
     @account = Account.find(params[:id])
   end
