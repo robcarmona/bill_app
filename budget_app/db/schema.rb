@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 20160129014422) do
     t.string   "name",        limit: 255
     t.string   "description", limit: 255
     t.integer  "user_id",     limit: 4
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.decimal  "balance",                 precision: 8, scale: 2
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
   create_table "bills", force: :cascade do |t|
